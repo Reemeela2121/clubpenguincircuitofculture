@@ -5,7 +5,7 @@ function qs(selector, all = false) {
 const sections = qs('.section', true);
 const timeline = qs('.timeline');
 const line = qs('.line');
-line.style.bottom = `calc(100% - 20px)`;
+line.style.bottom = `calc(300% - 20px)`;
 let prevScrollY = window.scrollY;
 let up, down;
 let full = false;
@@ -49,3 +49,24 @@ function scrollHandler(e){
 scrollHandler();
 line.style.display = 'block';
 window.addEventListener('scroll', scrollHandler)
+
+
+const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', e => {
+    cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+})
+
+document.addEventListener('click', () => {
+    cursor.classList.add("expand");
+
+    setTimeout(() => {
+        cursor.classList.remove("expand");
+    }, 500)
+})
+
+function GoBack() {
+    window.location.href="index.html";
+}
+
+

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style> 
+
+/*
+  The grid itself needs only 4 CSS declarations:
+*/
+
+.myGallery {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.myGallery img {
+  width: 100%;
+}
+
+/*
+  And here are some declarations for the image caption.
+  Just hover over one of the last 5 images to see it.
+*/
+
+.myGallery .item {
+  position: relative;
+  overflow: hidden;
+}
+
+.myGallery .item img {
+  vertical-align: middle;
+}
+
+.myGallery .caption {
+  margin: 0;
+  padding: 1em;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+  transition: transform 0.5s;
+  transform: translateY(100%);
+  background: rgba(0, 0, 0, 0.7);
+  color: rgb(255, 255, 255);
+}
+
+.myGallery .item:hover .caption {
+  transform: translateY(0%);
+}
+
+</style>
+<body>
+    
+    <div id="home">
+        <div class="cursor"></div>
+    <div style="height: 100%; display: grid; align-content:center; justify-content: space-evenly;">
+        <h1 data-aos="fade-up" data-aos-duration="1000" style="font-size: 75px;width: 1000px; display: flex; align-content: center; justify-content: space-evenly; margin-top: 2rem;"> Representation </h1>
+        <h2 data-aos="fade-up" data-aos-duration="1000"> 
+            How did Club Penguin change to represent Disney when it was sold to them?
+            </h2>
+        
+            <p id="item" data-aos="fade-up" data-aos-duration="1000" style="width: 1000px"> 
+                After the game was bought by Disney, Club Penguin started to seem like one big advertisement for Disney. From the logo change with Disney plastered on the top of the iconic Club Penguin logo,
+                to sponsored week-long events to promote a new TV show, it seemed like Diney's intentions with Club Penguin weren't necessarily to bring more players to the game, but to bring the 330 million players
+                to Disney. They had events featuring Marvel, Shake It Up, Teen Beach Movie, Monsters University, and Star Wars. Through these sponsored parties and events, it was very clear that Disney owned the game
+                and wanted to capitalize on the majority-children player base who would be interesting in consuming other content that Disney had to offer. 
+                <br> <br>
+                Later on, the game's representation as a children's game would change
+                after the shut down of the original website and the start of the pandemic, where nostalgic teens and young adults (like myself) would flock to rebooted versions of this cherished game. These older players weren't
+                new to Club Penguin, but they represented a different side to what the game meant to players. Ten years ago, Club Penguin represented itself as a place where children could safely chat online and network with other
+                children. Now, the idea of Club Penguin lives on in Club Penguin Rewritten and other free reboots of the game, where it is a place where grown-up players can relive their childhood and feel nostalgic.     
+            </p>
+        
+
+        <!-- <div style="width: 1000px; display: flex; align-content: center; justify-content: space-evenly;"> -->
+            <button onclick="GoBack()" style="margin-bottom: 100px; z-index: 500;"> go back! </button>
+        <!-- </div> -->
+    </div>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+            AOS.init();
+    </script>
+
+    <!-- where stuff ends -->
+    
+    <script src="index.js"></script>
+</body>
+</html>

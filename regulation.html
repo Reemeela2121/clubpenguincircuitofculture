@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style> 
+
+/*
+  The grid itself needs only 4 CSS declarations:
+*/
+
+.myGallery {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.myGallery img {
+  width: 100%;
+}
+
+/*
+  And here are some declarations for the image caption.
+  Just hover over one of the last 5 images to see it.
+*/
+
+.myGallery .item {
+  position: relative;
+  overflow: hidden;
+}
+
+.myGallery .item img {
+  vertical-align: middle;
+}
+
+.myGallery .caption {
+  margin: 0;
+  padding: 1em;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+  transition: transform 0.5s;
+  transform: translateY(100%);
+  background: rgba(0, 0, 0, 0.7);
+  color: rgb(255, 255, 255);
+}
+
+.myGallery .item:hover .caption {
+  transform: translateY(0%);
+}
+
+</style>
+<body>
+    
+    <div id="home">
+        <div class="cursor"></div>
+    <div style="height: 100%; display: grid; align-content:center; justify-content: space-evenly;">
+        <h1 data-aos="fade-up" data-aos-duration="1000" style="font-size: 75px;width: 1000px; display: flex; align-content: center; justify-content: space-evenly; margin-top: 2rem;"> Regulation </h1>
+        <h2 data-aos="fade-up" data-aos-duration="1000" style="width: 1000px"> 
+            In what ways did the producers of this MMO limit players' interactions between each other and with the game itself?
+            </h2>
+        
+        <p data-aos="fade-up" data-aos-duration="1000" style="width: 1000px"> 
+            Due to the majority of players identifying as children within the game, the developers created in-game regulations in order to protect the safety of the players.
+            This meant that parents had the option to limit the chatting functionalities of their child's Club Penguin account. If you had Ultimate Safe Chat turned on, this meant that the player
+            could only choose from a series of words of phrases in order to communicate with their peers in the game. Another aspect of regulation within Club Penguin, were the use of moderators 
+            who monitored the behavior of players and determined whether there was any misconduct going on and what to do about it. There were rude words your penguin avatar wasn't allowed to say at any cost, 
+            and if your penguin said them, they could be banned for at least 24 hours. Another avenue of regulation within the game, were these "walled gardens" where it cost real-life money in order to fully participate 
+            within the community and access all the features of the game. Lastly, by producing limited-time only events, the owners of Club Penguin could regulate what kind of content players could access or see at any time. 
+            This just meant that seasonal events would happen in-season, like Christmas or Halloween parties.
+
+            <br> <br> 
+            <br> <br>
+            
+        </p>
+
+        <div class="myGallery" data-aos="fade-up" data-aos-duration="1000">
+
+            <div class="item">
+              <img src="assets/RudeWord9.png" style="width:250px;
+              height:250px;
+              background-size:cover;
+              background-position:center;"/>
+            </div>
+            <div class="item">
+                <img src="assets/DDvEBJYVoAIUMt-.jpeg" style="width:250px;
+                height:250px;
+                background-size:cover;
+                background-position:center;"/>
+              </div>
+              <div class="item">
+                <img src="assets/Ultimate_Safe_Chat_phrases_list.png" style="width:250px;
+                height:250px;
+                background-size:cover;
+                background-position:center;"/>
+              </div>
+              <div class="item">
+                <img src="assets/clubpengiun2.jpeg" style="width:250px;
+                height:250px;
+                background-size:cover;
+                background-position:center;"/>
+              </div>
+        </div>
+        <!-- <div style="width: 1000px; display: flex; align-content: center; justify-content: space-evenly;"> -->
+            <button onclick="GoBack()" style="margin-bottom: 100px; z-index: 500;"> go back! </button>
+        <!-- </div> -->
+    </div>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+            AOS.init();
+    </script>
+
+    <!-- where stuff ends -->
+    
+    <script src="index.js"></script>
+</body>
+</html>
